@@ -1,51 +1,9 @@
 {{ define "main" }}
-<div class="min-h-[640px] bg-white dark:bg-tuna">
-    <div x-data="{ open: false }" @keydown.window.escape="open = false">
-      <!-- Static sidebar for desktop -->
-      {{- partial "global/desktop/navigation" -}}
-  
-      <div class="relative z-0 flex flex-1 overflow-hidden">
-        <div class="relative z-0 flex-1 overflow-y-auto focus:outline-none lg:pl-72">
-          {{- partial "global/navbar" -}} {{- partial "global/mobile/navigation" -}}
-          <!-- Start main area-->
-          <div class="flex-1 mx-auto">
-            <section class="
-                mx-auto
-                bg-white
-                border-b
-                dark:bg-tuna
-                border-periblue
-                max-w-7xl
-                dark:border-gun
-              ">
-              <div class="px-4 mx-auto max-w-7xl sm:px-6 md:px-32 pt-44">
-                <h1 data-animate="title" class="
-                    py-10
-                    mx-auto
-                    text-4xl
-                    font-light
-                    leading-none
-                    tracking-tighter
-                    text-comet
-                    dark:text-manatee
-                    lg:text-5xl
-                  ">
-                  {{ .Page.Title }}
-                </h1>
-              </div>
-            </section>
-            <section class="pt-6 pb-24 bg-white dark:bg-tuna">
-              <div class="px-4 mx-auto sm:px-6 md:px-32">
-                {{ .Content }}
-              </div>
-            </section>
-          </div>
-          <!-- End div area -->
-        </div>
-        <!-- You can insert a third column here, for a table of contents if you wish, is already built and it will be fixed and hidden on phone.-->
-  
-        <!-- End secondary column -->
-      </div>
+<section class="prose">
+  <div class="max-w-3xl">
+    <div class="mx-auto space-y-24 text-lg text-left">
+      {{ .Content }}
     </div>
-</div>
+  </div>
+</section>
 {{ end }}
