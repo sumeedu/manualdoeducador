@@ -1,0 +1,42 @@
+<head>
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+
+  <!-- Primary Meta Tags -->
+  <title>{{ with .Page.Title }}{{ . }}| {{ end }}{{ .Site.Title }}</title>
+  <meta name="title" content="{{ with .Page.Title }}{{ . }}| {{ end }}{{ .Site.Title }}">
+  <meta name="description" content="">
+
+  <!-- Open Graph / Facebook -->
+  <!--
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="#">
+		<meta property="og:title" content="Text">
+		<meta property="og:description" content="Text">
+		<meta property="og:image" content="#">
+  -->
+
+  <!-- Twitter -->
+  <!--
+		<meta property="twitter:card" content="summary_large_image">
+		<meta property="twitter:url" content="#">
+		<meta property="twitter:title" content="Text">
+		<meta property="twitter:description" content="Text">
+		<meta property="twitter:image" content="#">
+  -->
+
+  <!-- Styles -->
+  {{ $styles := resources.Get "css/styles.css" | resources.PostCSS }}
+  {{ if .Site.IsServer }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}"/>
+  {{ else }}
+    {{ $styles := $styles | minify   }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
+  {{ end }}
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>

@@ -1,0 +1,49 @@
+<!-- JavaScript -->
+<!--
+<script src="js/app.js"></script>
+-->
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+<script>
+    var sideBar = document.getElementById("mobile-nav");
+    var openSidebar = document.getElementById("openSideBar");
+    var closeSidebar = document.getElementById("closeSideBar");
+
+    function sidebarHandler(flag) {
+        if (flag) {
+            sideBar.style.transform = "translateX(0px)";
+            openSidebar.classList.add("hidden");
+            closeSidebar.classList.remove("hidden");
+        } else {
+            sideBar.style.transform = "translateX(-260px)";
+            closeSidebar.classList.add("hidden");
+            openSidebar.classList.remove("hidden");
+        }
+    }
+</script>
+
+<script>
+    let dark = localStorage.getItem("dark");
+
+    function enabledark() {
+        document.body.classList.add("dark");
+        localStorage.setItem("dark", "enabled");
+    }
+
+    function disabledark() {
+        document.body.classList.remove("dark");
+        localStorage.setItem("dark", null);
+    }
+
+    if (dark === "enabled") enabledark();
+
+    // Listeners
+    const darkToggle = document.querySelector("#dark-mode-toggle");
+    darkToggle.addEventListener("click", () => {
+        dark = localStorage.getItem("dark");
+        dark !== "enabled" ? enabledark() : disabledark();
+    });
+
+    function tabData() {
+        return {}
+    }
+</script>

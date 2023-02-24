@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="{{ .Language.Lang }}" class="h-full bg-white dark:bg-tuna" style="scroll-behavior: smooth" id="main">
+    {{- partial "head.html" . -}}
+    <body  class="h-full mx-auto bg-white 2xl:max-w-7xl dark:bg-tuna" id="top">
+        {{- partial "header.html" . -}}
+        <div id="content">
+            {{- block "main" . }}{{- end }}
+        </div>
+        {{- partial "footer.html" . -}}
+    </body>
+</html>
