@@ -35,7 +35,7 @@
 
 1. Clone the repository
 ```
-git clone git@github.com/sumesolutions/website.gi
+git clone git@github.com:sumeedu/manualdoeducador.git
 ```
 
 2. Download the dependencies
@@ -58,7 +58,7 @@ This is the best way to find help and get in touch with the community.
 
 ### Bugs
 
-If you found a bug the best way to do it is [opening an issue](https://github.com/sumesolutions/website/issues).
+If you found a bug the best way to do it is [opening an issue](https://github.com/sumeedu/manualdoeducador/issues).
 
 ## License
 
