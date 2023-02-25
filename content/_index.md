@@ -1,6 +1,7 @@
 ---
 title: "Introdução"
 date: 2023-02-24T22:05:25+01:00
+url: /
 ---
 A iniciativa de elaborar este manual é garantir aos educadores e alunos uma compreensão, 
 ampla e detalhada, sobre o que é a Sumé e o Sumé LMS e como eles podem auxiliar no 
